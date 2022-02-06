@@ -1,6 +1,8 @@
-{{#each this.hits}}
+{{#each this}}
     <div class="photo-card">
+      <a href="{{largeImageURL}}">
           <img src="{{largeImageURL}}" alt="{{tags}}" loading="lazy" style="width: 300px; height: 180px"/>
+      </a>
       <div class="info">
         <p class="info-item">
           <b>Likes</b>
