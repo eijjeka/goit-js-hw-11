@@ -9,15 +9,20 @@ const refs = {
     containerGallery: document.querySelector('.gallery'),
     loadMorebtn: document.querySelector('.load-more'),
     anchor: document.querySelector('.anchor')
+
 }
+let quantityValueLoadMore = 1;
 
 const newApiService = new apiService();
 
 function onSearch (event) {
     event.preventDefault();
     newApiService.searchName = event.currentTarget.elements.searchQuery.value.trim();
-    newApiService.resetPage()
-    newApiService.fetchArticles().then(({hits, totalHits}) => {
+    newApiService.resetPage();
+    newApiService.fetchArticles().then(({ hits, totalHits }) => {
+
+        quantityValueLoadMore = 1;
+
         addClassBtn();
         addClassAnchor();
         clearGallery();
@@ -47,18 +52,13 @@ function onLoadMore() {
 }
 
 function addArticles(hits) {
+
     refs.containerGallery.insertAdjacentHTML('beforeend', compiledTemplate(hits));
     let lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250, captionPosition: 'bottom', });
     lightbox.refresh();
 
-    const { height: cardHeight } = document
-        .querySelector('.gallery')
-        .firstElementChild.getBoundingClientRect();
-
-    window.scrollBy({
-        top: cardHeight * 2,
-        behavior: 'smooth',
-    });
+    if (quantityValueLoadMore > 1) lowScrollForBtnLoadMore();
+    quantityValueLoadMore++
 }
 
 function clearGallery() {
@@ -72,6 +72,17 @@ function checkTotalHits(totalHits) {
         Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
         addClassBtn();
     }
+}
+
+function lowScrollForBtnLoadMore() {
+    const { height: cardHeight } = document
+        .querySelector('.gallery')
+        .firstElementChild.getBoundingClientRect();
+
+        window.scrollBy({
+            top: cardHeight * 2,
+            behavior: 'smooth',
+        });
 }
 
 function addClassBtn() {
