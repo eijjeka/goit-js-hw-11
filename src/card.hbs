@@ -1,11 +1,11 @@
 {{#each this}}
     <div class="photo-card">
       <a href="{{largeImageURL}}">
-          <img src="{{largeImageURL}}" alt="{{tags}}" loading="lazy" style="width: 300px; height: 180px"/>
+          <img class="photo-card__image" src="{{largeImageURL}}" alt="{{tags}}" loading="lazy" style="width: 300px; height: 180px"/>
       </a>
       <div class="info">
         <p class="info-item">
-          <b>Likes</b>
+          <b>Like</b>
           <span class="result">{{likes}}</span>
         </p>
         <p class="info-item">

@@ -1,8 +1,9 @@
+import apiService from '../js/fecthapi'
 import compiledTemplate from "../card.hbs";
 import Notiflix from 'notiflix';
-import apiService from '../js/fecthapi'
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+
 
 const refs = {
     searchForm: document.querySelector('.search-form'),
@@ -108,4 +109,5 @@ function handleAnchorClick() {
 refs.searchForm.addEventListener('submit', onSearch);
 refs.loadMorebtn.addEventListener('click', onLoadMore);
 refs.anchor.addEventListener('click', handleAnchorClick);
+
 
