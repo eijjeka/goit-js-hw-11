@@ -1,0 +1,23 @@
+{{#each this.hits}}
+    <div class="photo-card">
+          <img src="{{largeImageURL}}" alt="{{tags}}" loading="lazy" style="width: 300px; height: 180px"/>
+      <div class="info">
+        <p class="info-item">
+          <b>Likes</b>
+          <span class="result">{{likes}}</span>
+        </p>
+        <p class="info-item">
+          <b>Views</b>
+          <span class="result">{{views}}</span>
+        </p>
+        <p class="info-item">
+          <b>Comments</b>
+          <span class="result">{{comments}}</span>
+        </p>
+        <p class="info-item">
+          <b>Downloads</b>
+          <span class="result">{{downloads}}</span>
+        </p>
+      </div>
+    </div>
+{{/each}}

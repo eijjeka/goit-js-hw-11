@@ -1,0 +1,104 @@
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  width: 300px;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+b {
+  margin-bottom: 3px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: rgb(85, 93, 214);
+
+  &__btn {
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  &__btn:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -10px;
+}
+
+.photo-card {
+  margin: 10px 10px 10px 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.info-item {
+  font-family: 'Arial';
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.result {
+  font-size: 13px;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.load-more {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(85, 93, 214);
+  color: #fff;
+
+  &:hover {
+    background-color: rgb(90, 100, 231);
+    cursor: pointer;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.anchor {
+  margin-left: 20px;
+  font-size: 50px;
+  text-decoration: none;
+  cursor: pointer;
+}
