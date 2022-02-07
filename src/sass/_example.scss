@@ -1,5 +1,6 @@
 body {
   background-image: url(../images/px_by_Gre3g.png);
+  position: relative;
 }
 
 img {
@@ -12,12 +13,13 @@ a {
 
 input {
   width: 300px;
-  padding: 5px;
+  padding: 5px 20px 5px 20px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: none;
   outline: none;
-  background-color: rgba(180, 182, 199, 0.747);
+  background-color: rgba(82, 83, 87, 0.747);
+  color: rgba(224, 222, 222, 0.966);
 }
 
 ::placeholder {
@@ -100,22 +102,12 @@ b {
   margin-top: 20px;
 }
 
-.load-more {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgb(252, 243, 243);
-  color: rgb(0, 0, 0);
-  margin-bottom: 10px;
-
-  &:hover {
-    background-color: rgb(207, 207, 207);
-    cursor: pointer;
-  }
-}
-
 .is-hidden {
   display: none;
+}
+
+.load-more {
+  height: 20px;
 }
 
 .anchor {
@@ -123,4 +115,7 @@ b {
   font-size: 50px;
   text-decoration: none;
   cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
